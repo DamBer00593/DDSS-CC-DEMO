@@ -9,15 +9,17 @@ for i = 5,0,-1 do
   print(i)
   local item = component.inventory_controller.getStackInSlot(i,1)
  
-  if item then
-    print("itemName: ",item.name)
-    --print("itemId: ",item.id)
-    print("itemCount: ",item.size)
-    print("itemLabel: ",item.label)
+  if not(item) then
+     print("Side "..i.." Has no chest")
   else
-    print("slot "..slot.." is empty")
+     print(slot..": ItemName("..item.name.."), itemLabel("..item.label.."), itemQuantity("..item.size..")")0
+    --[[print("itemName: ",item.name)
+    print("itemId: ",item.id)
+    print("itemCount: ",item.size)
+    print("itemLabel: ",item.label)--]]
+    
   end
 end
  
  
-component.inventory_controller.dropIntoSlot(sides.west,1,1)
+--component.inventory_controller.dropIntoSlot(sides.west,1,1)
