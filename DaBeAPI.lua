@@ -21,7 +21,7 @@ local version = 1.0
   @param slot - the slot in the inventory to get the data for
   @return getStackInSlotMethod data
   --]]
-  function DaBeAPI.inv_getSlotInfo(inventoryController,side,slot)
+  function DaBeAPI.invGetSlotInfo(inventoryController,side,slot)
     return inventoryController.getStackInSlot(side,slot)
   end
   --[[
