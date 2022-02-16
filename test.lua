@@ -6,7 +6,7 @@ This program uses DaBeAPI.lua (not fully integrated)
 
 local component = require("component")
 local sides = require("sides")
-local DaBeAPI = require("\hdd\DaBeAPI.lua")
+local DaBeAPI = require("DaBeAPI")
 local InvComp = component.inventory_controller
 
 for i = 5,0,-1 do
