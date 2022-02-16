@@ -30,7 +30,7 @@ local version = 1.0
   @param slot - the slot in the inventory the data is being presented for
   @param item - the getStackInSlot() method is used to grab this item
   --]]
-  function DaBeAPI.toString(slot,item)
+  function DaBeAPI.to_String(slot,item)
     return (slot.."[itemName("..item.name.."), itemLabel("..item.label.."), itemQuantity("..item.size..")]")
   end
 
