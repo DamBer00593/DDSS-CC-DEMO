@@ -16,13 +16,13 @@ local version = 1.0
   end
   --[[
   This is an method used to shorten the getStackInSlot for the advanced inventory controller on DDSS
-  @param component
+  @param inventoryController - the component.inventory_controller
   @param side - the side of the adapter the chest is on
   @param slot - the slot in the inventory to get the data for
   @return getStackInSlotMethod data
   --]]
-  function DaBeAPI.getInfoFromSlot(component,side,slot)
-    return component.inventory_controller.getStackInSlot(side,slot)
+  function DaBeAPI.inv_getSlotInfo(inventoryController,side,slot)
+    return inventoryController.getStackInSlot(side,slot)
   end
   --[[
   This method is used to print the string representation in the following format:
@@ -30,7 +30,7 @@ local version = 1.0
   @param slot - the slot in the inventory the data is being presented for
   @param item - the getStackInSlot() method is used to grab this item
   --]]
-  function DaBeAPI.to_String(slot,item)
+  function DaBeAPI.toString(slot,item)
     return (slot.."[itemName("..item.name.."), itemLabel("..item.label.."), itemQuantity("..item.size..")]")
   end
 
