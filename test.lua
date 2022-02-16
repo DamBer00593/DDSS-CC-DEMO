@@ -11,7 +11,7 @@ local InvComp = component.inventory_controller
 
 for i = 5,0,-1 do
   slot = 1
-  local item = DaBeAPI.inv_getSlotInfo(InvComp,i,slot)
+  local item = DaBeAPI.invGetSlotInfo(InvComp,i,slot)
 
   if item then
     print("Chest on side: "..i)
