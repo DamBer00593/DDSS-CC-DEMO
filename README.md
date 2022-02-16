@@ -11,3 +11,6 @@ back: north, negz, 2
 Front: south, posz, forward, 3  
 Right: west, negx, 4  
 Left: east, posx, 5  
+
+Other Documentations for the OpenComputersAPI will be listed below
+Inventory Controller https://ocdoc.cil.li/component:inventory_controller
