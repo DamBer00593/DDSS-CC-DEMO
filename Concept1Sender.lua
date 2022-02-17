@@ -14,20 +14,24 @@ local InvComp = component.inventory_controller
 local modem = component.modem
 local chestSide = 5
 local slot = 1
-local itemName = "thermalfoundation:material"
-local itemDmg = "352"
+local itemName = "minecraft:dirt"
+local itemDmg = 0.0
+local itemQty = 16
 --End Of Instance Variable Declaration--
 
 while true do
-  local item = DaBeAPI.invGetSlotInfo(invComp,chestSide,slot)
+  os.sleep(.5)
+  local item = DaBeAPI.invGetSlotInfo(invComp,chestSide,slot) --This is broken fix it later
+  --local item = InvComp.getStackInSlot(chestSide,slot)
   if item then --In this statement we verify if the item is nil or not if it is we print error to the terminal
     
-    --The variables itemName and itemDmg are purely for testing purposes the names can be hardcoded in at a later date!
+    --The variables itemName and itemDmg and itemQty are purely for testing purposes the names can be hardcoded in at a later date!
     
     if item.name == itemName and itemDmg == 0 then --In this statement we determine if the name and the dmg value of the item match whats expected
       
-      if item.size == 16 then --We verify the quantity is correct
+      if item.size == itemQty then --We verify the quantity is correct
         modem.broadcast(9,"test")
+        print("Sending Freq!")
       end
       
     end
