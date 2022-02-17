@@ -14,11 +14,11 @@ Possible todo: Add senderAdress verification
 --Instance Variable Declaration--
 local invComp = component.inventory_controller
 local modem = component.modem
-local currChestSide = sides.???? --Chest that the currency is put into
-local impChestSide = sides.???? --Chest that the robot throws the currency in
-local interfaceSide = sides.???? --AE2 Interface where i can grab the purchased item
-local currQty = ??? --How much quantity for currency
-local purQty = ??? --How much quantity of item
+local currChestSide = sides.top --Chest that the currency is put into
+local impChestSide = sides.bottom --Chest that the robot throws the currency in
+local interfaceSide = sides.right --AE2 Interface where i can grab the purchased item
+local currQty = 16 --How much quantity for currency
+local purQty = 1 --How much quantity of item
 --End Of Instance Variable Declaration--
 
 while true do
