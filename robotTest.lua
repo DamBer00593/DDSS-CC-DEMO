@@ -10,7 +10,5 @@ local DaBeAPI = require("DaBeAPI")
 term.clear()
 
 robot.select(right)
-
-inv.dropIntoSlot(1,1,1)
-local item = inv.getStackInSlot(right,1)
-print(item.label)
+inv.dropIntoSlot(sides.front,1)
+inv.suckFromSlot(sides.front,1)
