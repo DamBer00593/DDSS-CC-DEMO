@@ -20,9 +20,9 @@ local itemQty = 16
 --End Of Instance Variable Declaration--
 
 while true do
-  os.sleep(.5)
-  local item = DaBeAPI.invGetSlotInfo(invComp,chestSide,slot) --This is broken fix it later
-  --local item = InvComp.getStackInSlot(chestSide,slot)
+  os.sleep(2)
+  --local item = DaBeAPI.invGetSlotInfo(invComp,chestSide,slot) --This is broken fix it later
+  local item = InvComp.getStackInSlot(chestSide,slot)
   if item then --In this statement we verify if the item is nil or not if it is we print error to the terminal
     
     --The variables itemName and itemDmg and itemQty are purely for testing purposes the names can be hardcoded in at a later date!
