@@ -12,7 +12,7 @@ Possible todo: Add a disclaimer to the screen that we arent responsible for any 
 --Instance Variable Declaration--
 local InvComp = component.inventory_controller
 local modem = component.modem
-local chestSide = ???
+local chestSide = 5
 local slot = 1
 --End Of Instance Variable Declaration--
 
