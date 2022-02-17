@@ -14,8 +14,8 @@ local InvComp = component.inventory_controller
 local modem = component.modem
 local chestSide = 5
 local slot = 1
-local itemName = thermalfoundation:material
-local itemDmg = 352
+local itemName = "thermalfoundation:material"
+local itemDmg = "352"
 --End Of Instance Variable Declaration--
 
 while true do
@@ -35,3 +35,4 @@ while true do
   else
     print("Error")
   end
+end
