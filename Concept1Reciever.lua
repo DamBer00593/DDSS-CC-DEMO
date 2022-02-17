@@ -28,4 +28,5 @@ while true do
       invComp.dropIntoSlot(impChestSide,1)
       invComp.suckFromSlot(interfaceSide,1,purQty)
       invComp.dropIntoSlot(currChestSide,1) 
+    end
 end
