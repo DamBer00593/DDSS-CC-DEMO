@@ -13,4 +13,5 @@ Right: west, negx, 4
 Left: east, posx, 5  
 
 Other Documentations for the OpenComputersAPI will be listed below  
-Inventory Controller https://ocdoc.cil.li/component:inventory_controller
+Inventory Controller https://ocdoc.cil.li/component:inventory_controller  
+Robot API https://ocdoc.cil.li/api:robot
