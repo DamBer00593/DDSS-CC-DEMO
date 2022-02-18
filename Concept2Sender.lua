@@ -17,15 +17,47 @@ local rs = component.redstone
 local bp = 0 --Button pressed should be renamed later currently a test value
 local chestSide = 5
 local slot = 1
-local itemName = "minecraft:dirt"
-local itemDmg = 0.0
-local itemQty = 16
 
 local dirt = {"minecraft:dirt", 0.0, 16} --currency = {itemName, itemDmg, itemQty}
 
 while true do
-  if itemName == dirt[1] and itemDmg == dirt[2] and itemQty == dirt[3] then
-    print("woo the table works")
-    break
+  os.sleep(1)
+  term.clear()
+  while true do --beginning of internal button while loop
+    if rs.getBundledInput(sides.top,0) > then
+        bp = 1
+    end
+    if rs.getBundledInput(sides.top,14) > 0 then
+      bp = 2
+    end
+
+    if bp == 0 then
+      print("Nothing is currently selected")
+    elseif bp == 1 then
+      print("Cobblestone is selected")
+    elseif bp == 2 then
+      print("Wood is selected")
+    end
+    
+    if bp > 0 then
+      break
+    end
+  end --end of internal button while loop
+  local item = InvComp.getStackInSlot(chestSide,slot)
+  
+  if item then
+    if item.name == dirt[1] and itemDmg == dirt[2] then
+      if item.size == dirt[3] then
+        if bp == 1 then
+          modem.transmit(9,"cobblestone")
+          print("Sending Frequency!")
+        elseif bp == 2 then
+          modem.trasmit(9,"Wood")
+          print("Sending Frequency!")
+        end
+      end
+    end
+  else
+    print("No item in chest")
   end
 end
