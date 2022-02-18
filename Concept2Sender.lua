@@ -21,10 +21,7 @@ local slot = 1
 local dirt = {"minecraft:dirt", 0.0, 16} --currency = {itemName, itemDmg, itemQty}
 
 while true do
-  os.sleep(1)
-  term.clear()
   while true do --beginning of internal button while loop
-    os.sleep(1)
     term.clear()
     if rs.getBundledInput(sides.top,0) > 0 then
         bp = 1
@@ -44,6 +41,7 @@ while true do
     if bp > 0 then
       break
     end
+    os.sleep(1)
   end --end of internal button while loop
   local item = InvComp.getStackInSlot(chestSide,slot)
   
