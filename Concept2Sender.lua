@@ -24,7 +24,9 @@ while true do
   os.sleep(1)
   term.clear()
   while true do --beginning of internal button while loop
-    if rs.getBundledInput(sides.top,0) > then
+    os.sleep(1)
+    term.clear()
+    if rs.getBundledInput(sides.top,0) > 0 then
         bp = 1
     end
     if rs.getBundledInput(sides.top,14) > 0 then
