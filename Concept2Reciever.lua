@@ -18,20 +18,24 @@ local currChestSide = sides.top --Chest that the currency is put into
 local impChestSide = sides.bottom --Chest that the robot throws the currency in
 local interfaceSide = sides.right --AE2 Interface where i can grab the purchased item
 local currQty = 16 --How much quantity for currency
+local CobblestoneQty = 16
+local woodQty = 4
 local purQty = 1 --How much quantity of item
+
 --End Of Instance Variable Declaration--
 
 while true do
+
     local _, _, from, port, _, message = event.pull("modem_message")
     if messsage == "Cobblestone" then
-      invComp.suckFromSlot(currChestSide,1,qty)
+      invComp.suckFromSlot(currChestSide,1,currQty)
       invComp.dropIntoSlot(impChestSide,1)
-      invComp.suckFromSlot(interfaceSide,1,purQty)
+      invComp.suckFromSlot(interfaceSide,1,CobblestoneQty)
       invComp.dropIntoSlot(currChestSide,1)
     elseif message == "Wood" then
-      invComp.suckFromSlot(currChestSide,1,qty)
+      invComp.suckFromSlot(currChestSide,1,currQty)
       invComp.dropIntoSlot(impChestSide,1)
-      invComp.suckFromSlot(interfaceSide,2,purQty)
+      invComp.suckFromSlot(interfaceSide,2,woodQty)
       invComp.dropIntoSlot(currChestSide,1)
     end
 end
