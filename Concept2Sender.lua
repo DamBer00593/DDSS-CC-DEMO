@@ -34,10 +34,10 @@ while true do
     print("Nothing is currently selected")
   elseif bp == 1 then
     print("Cobblestone is selected")
-    test = "Cobblestone"
+    test = "16 Cobblestone"
   elseif bp == 2 then
     print("Wood is selected")
-    test = "Wood"
+    test = "4 Wood"
   end
     
 
