@@ -18,7 +18,7 @@ local bp = 0 --Button pressed should be renamed later currently a test value
 local chestSide = 5 -- the side the chest is on
 local slot = 1 -- The slot used for verification could be hardcoded later 
 local confrm = 0 -- 0 is false 1 is true
-
+local test = ""
 local dirt = {"minecraft:dirt", 0.0, 16} --currency = {itemName, itemDmg, itemQty}
 
 while true do
@@ -34,8 +34,10 @@ while true do
     print("Nothing is currently selected")
   elseif bp == 1 then
     print("Cobblestone is selected")
+    test = "Cobblestone"
   elseif bp == 2 then
     print("Wood is selected")
+    test = "Wood"
   end
     
 
@@ -45,6 +47,7 @@ while true do
     if item.name == dirt[1] and itemDmg == dirt[2] then
       if item.size == dirt[3] then
         print("Please press the confirmation button if everything is okay.")
+        PRINT("You've put in "..item.size.. " of "..item.name..", You will be recieving "..test)
         if rs.getBundledInput(sides.top,11) > 0 then
           confrm = 1
         end
