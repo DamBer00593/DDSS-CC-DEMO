@@ -55,7 +55,7 @@ while true do
           modem.transmit(9,"cobblestone")
           print("Sending Frequency!")
           confrm = 0
-        elseif bp == 2 confrm == 1 then
+        elseif bp == 2 and confrm == 1 then
           modem.trasmit(9,"Wood")
           print("Sending Frequency!")
           confrm = 0
