@@ -22,7 +22,7 @@ local confrm = 0 -- 0 is false 1 is true
 local dirt = {"minecraft:dirt", 0.0, 16} --currency = {itemName, itemDmg, itemQty}
 
 while true do
-  term.clear()
+
   if rs.getBundledInput(sides.top,0) > 0 then
       bp = 1
   end
@@ -38,7 +38,7 @@ while true do
     print("Wood is selected")
   end
     
-  os.sleep(1)
+
   local item = invComp.getStackInSlot(chestSide,slot)
   
   if item then
@@ -53,7 +53,7 @@ while true do
           print("Sending Frequency!")
           confrm = 0
         elseif bp == 2 and confrm == 1 then
-          modem.trasmit(9,"Wood")
+          modem.tranmit(9,"Wood")
           print("Sending Frequency!")
           confrm = 0
         end
@@ -62,4 +62,6 @@ while true do
   else
     print("No item in chest")
   end
+  os.sleep(1)
+  term.clear()
 end
