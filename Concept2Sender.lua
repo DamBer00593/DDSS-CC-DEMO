@@ -47,7 +47,7 @@ while true do
     if item.name == dirt[1] and item.damage == dirt[2] then
       if item.size == dirt[3] then
         print("Please press the confirmation button if everything is okay.")
-        PRINT("You've put in "..item.size.. " of "..item.name..", You will be recieving "..test)
+        print("You've put in "..item.size.. " of "..item.name..", You will be recieving "..test)
         if rs.getBundledInput(sides.top,11) > 0 then
           confrm = 1
         end
