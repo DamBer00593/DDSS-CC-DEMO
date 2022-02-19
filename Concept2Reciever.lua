@@ -17,25 +17,23 @@ local modem = component.modem
 local currChestSide = sides.top --Chest that the currency is put into
 local impChestSide = sides.bottom --Chest that the robot throws the currency in
 local interfaceSide = sides.right --AE2 Interface where i can grab the purchased item
-local currQty = 16 --How much quantity for currency
-local CobblestoneQty = 16
-local woodQty = 4
-local purQty = 1 --How much quantity of item
 
+local cobble = {1, 16, 16} -- item = {slot, quantity, purchaseAmount}
+local wood = {2, 4, 16}
 --End Of Instance Variable Declaration--
 
 while true do
 
     local _, _, from, port, _, message = event.pull("modem_message")
     if messsage == "Cobblestone" then
-      invComp.suckFromSlot(currChestSide,1,currQty)
+      invComp.suckFromSlot(currChestSide,1,cobble[3])
       invComp.dropIntoSlot(impChestSide,1)
-      invComp.suckFromSlot(interfaceSide,1,CobblestoneQty)
+      invComp.suckFromSlot(interfaceSide,cobble[1],cobble[2])
       invComp.dropIntoSlot(currChestSide,1)
     elseif message == "Wood" then
-      invComp.suckFromSlot(currChestSide,1,currQty)
+      invComp.suckFromSlot(currChestSide,1,wood[3])
       invComp.dropIntoSlot(impChestSide,1)
-      invComp.suckFromSlot(interfaceSide,2,woodQty)
+      invComp.suckFromSlot(interfaceSide,wood[1],wood[2])
       invComp.dropIntoSlot(currChestSide,1)
     end
 end
