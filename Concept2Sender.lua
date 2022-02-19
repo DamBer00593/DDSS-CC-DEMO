@@ -44,7 +44,7 @@ while true do
   local item = invComp.getStackInSlot(chestSide,slot)
   
   if item then
-    if item.name == dirt[1] and itemDmg == dirt[2] then
+    if item.name == dirt[1] and item.damage == dirt[2] then
       if item.size == dirt[3] then
         print("Please press the confirmation button if everything is okay.")
         PRINT("You've put in "..item.size.. " of "..item.name..", You will be recieving "..test)
