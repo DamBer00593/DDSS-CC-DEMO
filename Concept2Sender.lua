@@ -39,7 +39,7 @@ while true do
   end
     
   os.sleep(1)
-  local item = InvComp.getStackInSlot(chestSide,slot)
+  local item = invComp.getStackInSlot(chestSide,slot)
   
   if item then
     if item.name == dirt[1] and itemDmg == dirt[2] then
