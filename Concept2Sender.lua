@@ -38,9 +38,6 @@ while true do
     print("Wood is selected")
   end
     
-  if bp > 0 then
-    break
-  end
   os.sleep(1)
   local item = InvComp.getStackInSlot(chestSide,slot)
   
