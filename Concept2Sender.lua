@@ -49,11 +49,11 @@ while true do
           confrm = 1
         end
         if bp == 1 and confrm == 1 then
-          modem.transmit(9,"cobblestone")
+          modem.broadcast(9,"cobblestone")
           print("Sending Frequency!")
           confrm = 0
         elseif bp == 2 and confrm == 1 then
-          modem.tranmit(9,"Wood")
+          modem.broadcast(9,"Wood")
           print("Sending Frequency!")
           confrm = 0
         end
